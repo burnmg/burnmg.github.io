@@ -1,0 +1,109 @@
+<html>
+<head>
+
+<script>
+//
+//alan tan 在太傻论坛网友GRE_05Bible17Days.html程序上修改完善而成，版权没有，欢迎下载。
+//
+//一个轮回加30天后的显示不正确，原因是记忆方法规定了1、2、4、8、15、30，对其后的复习方法未作规定。
+//为了避免此问题，本程序只显示一个轮回加29天的背单词计划
+//-----------------get the parameter of starting list number-------------------
+
+urlinfo=window.location.href; 
+len=urlinfo.length;
+offset=urlinfo.indexOf("?");
+startidinfo=urlinfo.substr(offset,len)
+startids=startidinfo.split("=");
+total=parseInt(startids[1]);
+step=parseInt(startids[2]);
+startid=parseInt(startids[3]);
+//day=parseInt(startids[4]);
+
+if(total<1 || total>100 ||isNaN(total))
+  total=51;     //51 is default total number
+if(step<1 || step>total ||isNaN(step))
+  step=3;     //3 is default step
+if(startid<1 || startid>total ||isNaN(startid))
+  startid=1;     //1 is default starting number
+//if(day<1 || day>90 ||isNaN(day))
+//  day=total/step+29;     //60 is default days
+
+
+var strArr=new Array();
+var out="";    //
+var num=0;
+
+
+//---------------generate an array which stores targets of everyday------------
+var m = total/step;
+var n1 = Math.floor(m);
+var n2 = Math.ceil(m);
+var day=n2+29;
+
+for(i = 1;i<=n2;i++){
+  num=step*i-step+startid;
+  if(num>total){
+  num-=total;}
+  
+  strArr[i]="<b>L</b>ist "+num+"-"+((num+step-1>total)?num+step-1-total:num+step-1);
+}
+
+if(n2>n1){
+  strArr[n2]="<b>L</b>ist "+num+"-"+((startid==1)?total:startid-1);
+  if (num==((startid==1)?total:startid-1)){
+  	strArr[n2]="<b>L</b>ist "+num;
+  	}
+  }
+
+if(day>n2){
+for (i=n2+1;i<=day;i++){
+	strArr[i]="";
+	}
+}
+//---------------generate a string which stores the plan------------------------
+for(i = 1;i<=day;i++){
+  if(i>1)    out+="<hr>";
+  out+="Day"+i+": "+strArr[i];
+  
+  if(i-1>0){
+    out+="   "+strArr[i-1];
+  }
+  if(i-3>0){
+    out+="   "+strArr[i-3];
+  }  
+  if(i-7>0){
+    out+="   "+strArr[i-7];
+  }
+  if(i-14>0){
+   out+="   "+strArr[i-14];
+  }
+  if(i-29>0){
+   out+="   "+strArr[i-29];
+  }
+  out+="   "+strArr[i]+"<br>";
+}
+
+</script>
+<script>document.myform.in1.value=total</script>
+<script>document.myform.in2.value=step</script>
+<script>document.myform.in3.value=stratid</script>
+</head>
+<body>
+<form name="myform" action="#">
+Total List<input name="in1" size=2 type="text">
+Step<input name="in2" size=1 type="text">
+Start from List<input name="in3" size=2 type="text">
+ <input type="submit" value="OK">
+<br><b>
+Total:<script>document.write(total)</script>;
+Step:<script>document.write(step)</script>;
+Startid:<script>document.write(startid)</script></b>
+</form>
+<table width="600" border="1">
+<tr>
+<td><script>document.write(out);</script></td>
+</tr>
+<table>
+
+<body>
+</html>
