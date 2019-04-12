@@ -8,11 +8,14 @@ const HOSTED_URLS = {
 
 const examples = {
   'example1':
-      'Alice was beginning to get very tired of sitting by her sister on the bank.',
+      'I would not have war to be the main business of our lives',
   'example2':
-      'Buda-Pesth seems a wonderful place.',
+      'The Spaniards spent a few pleasant days among the fruit plantations,
+and slept in cool groves of overarching foliage',
   'example3':
-      'Scepticism was as much the result of knowledge, as knowledge is of scepticism.'      
+      'The tradition, that great healing springs existed far to the south of the land in which they lived, appears to have been wide spread among the Indians of the North in early times.',
+  'example4':
+       'It is nearly three weeks ago; and every hour I have expected to see Sidney come back.'
 };
 
 function status(statusText) {
