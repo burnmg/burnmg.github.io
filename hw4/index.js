@@ -12,9 +12,9 @@ const examples = {
   'example2':
       'Wrapping myself in my shaggy jacket of the cloth called bearskin , I fought my way against the stubborn storm.',
   'example3':
-      'There is a point of human despair where the northern poor take to drink -- and our own poor take to daggers ."', '" A poet is privileged ," replied Ezza , with a sneer .', '" If Signor Muscari were English be would still be looking for highwaymen in Wandsworth .', 'Believe me , there is no more danger of being captured in Italy than of being scalped in Boston ."', '" Then you propose to attempt it ?"', 'asked Mr Harrogate , frowning .', '" Oh , it sounds rather dreadful ," cried the girl.',  
+      'There is a point of human despair where the northern poor take to drink -- and our own poor take to daggers . A poet is privileged ," replied Ezza , with a sneer . If Signor Muscari were English be would still be looking for highwaymen in Wandsworth .Believe me , there is no more danger of being captured in Italy than of being scalped in Boston . Then you propose to attempt it ?"asked Mr Harrogate , frowning ." Oh , it sounds rather dreadful ," cried the girl.',  
    'example4':
-      'Carefully I hold them up to the sun ; carefully I gather the dew in the summer nights ; slowly they ripen ; they grow larger and redder and darker , and at last they are black , shining , delicious .', 'I hold them as high as I can for the little boy , who comes dancing out .', 'He shouts with joy , and gathers them in his dear hand ; and he runs to share them with his mother , saying , " Here is what the patient blackberry - bush bore for us .'   
+      'Carefully I hold them up to the sun ; carefully I gather the dew in the summer nights ; slowly they ripen ; they grow larger and redder and darker , and at last they are black , shining , delicious .I hold them as high as I can for the little boy , who comes dancing out .He shouts with joy , and gathers them in his dear hand ; and he runs to share them with his mother , saying , " Here is what the patient blackberry - bush bore for us .'   
 };
 
 function status(statusText) {
